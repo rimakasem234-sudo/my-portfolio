@@ -1,8 +1,7 @@
-// Typing Effect matching GitHub Profile
 const phrases = [
   "Telecommunications Engineer",
   "IoT & Digital Twin Researcher",
-  "Edge-Cloud AI | RAG | IoT Security | SDN"
+  "Edge-Cloud AI | RAG | Wi-Fi Sensing | SDN"
 ];
 
 const typedTextElement = document.getElementById("typed-text");
@@ -24,7 +23,7 @@ function typeEffect() {
   let speed = isDeleting ? 40 : 75;
 
   if (!isDeleting && charIndex === currentPhrase.length) {
-    speed = 1800; // Pause at full phrase
+    speed = 1800;
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
@@ -46,10 +45,29 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("active");
   });
 
-  // Close menu when clicking a link
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
     });
+  });
+
+  // Certifications card highlight navigation
+  const cards = Array.from(document.querySelectorAll(".cert-card"));
+  let activeIndex = 0;
+
+  function highlightCert(idx) {
+    cards.forEach((c, i) => {
+      c.style.borderColor = i === idx ? "#2563EB" : "#E2E8F0";
+    });
+  }
+
+  document.getElementById("certNext").addEventListener("click", () => {
+    activeIndex = (activeIndex + 1) % cards.length;
+    highlightCert(activeIndex);
+  });
+
+  document.getElementById("certPrev").addEventListener("click", () => {
+    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+    highlightCert(activeIndex);
   });
 });
