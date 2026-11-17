@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rima Kasem | Telecommunications Engineer & AI Researcher</title>
+  <title>Rima Kasem | Telecom Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
@@ -12,19 +12,19 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Sleek Navbar with ScrollSpy -->
   <header class="navbar">
     <div class="container nav-container">
       <a href="#hero" class="logo">Rima<span>Kasem</span></a>
       <nav class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#design">UI/UX</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact" class="nav-btn">Contact</a>
+        <a href="#about" class="nav-item active">About</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#certifications" class="nav-item">Certifications</a>
+        <a href="#research" class="nav-item">Research</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#design" class="nav-item">UI/UX</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#contact" class="nav-item">Contact</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
         <i class="fas fa-bars"></i>
@@ -32,22 +32,19 @@
     </div>
   </header>
 
-  <!-- Dark Academic Hero Banner -->
+  <!-- Animated Network Hero Banner -->
   <section id="hero" class="hero-banner">
-    <div class="hero-overlay"></div>
+    <canvas id="networkCanvas"></canvas>
+    <div class="hero-gradient-overlay"></div>
+
     <div class="container hero-banner-content">
-      <span class="hero-pill">MSc Telecommunications Engineering • University of Calabria</span>
-      <h1>Rima Kasem</h1>
+      <h1>Telecom Engineer</h1>
       <p class="typing-line"><span id="typed-text"></span><span class="cursor">|</span></p>
-      <p class="hero-sub">
-        Smart Sensing, Computing &amp; Networking • Edge–Cloud Digital Twins • AI &amp; RAG Systems
-      </p>
-      <div class="hero-buttons">
-        <a href="#research" class="btn btn-light-primary"><i class="fas fa-book-open"></i> Publications</a>
-        <a href="#projects" class="btn btn-light-outline"><i class="fas fa-project-diagram"></i> Projects</a>
-        <a href="https://www.linkedin.com/in/rima-kasem-5a6754287/" target="_blank" class="btn btn-light-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
     </div>
+
+    <a href="#about" class="scroll-down-btn" aria-label="Scroll to About">
+      <i class="fas fa-chevron-down"></i>
+    </a>
   </section>
 
   <!-- About Me Section -->
@@ -75,34 +72,25 @@
           </div>
         </div>
 
-        <div class="about-visual-frame">
-          <div class="about-diagram-card">
-            <svg viewBox="0 0 360 230" class="clean-svg" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="navyGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#1E3A8A"/>
-                  <stop offset="100%" stop-color="#2563EB"/>
-                </linearGradient>
-              </defs>
-              <rect width="360" height="230" rx="12" fill="#F8FAFC"/>
-              <rect x="70" y="20" width="220" height="44" rx="8" fill="url(#navyGrad)"/>
-              <text x="180" y="40" fill="#FFFFFF" font-size="11" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">Cloud Intelligence &amp; Digital Twin</text>
-              <text x="180" y="54" fill="#DBEAFE" font-size="9" text-anchor="middle" font-family="Fira Code, monospace">Eclipse Ditto • RAG • ML Analytics</text>
-              <line x1="120" y1="64" x2="95" y2="96" stroke="#2563EB" stroke-width="1.8" stroke-dasharray="4 3"/>
-              <line x1="240" y1="64" x2="265" y2="96" stroke="#2563EB" stroke-width="1.8" stroke-dasharray="4 3"/>
-              <rect x="35" y="96" width="125" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
-              <text x="97" y="116" fill="#1E3A8A" font-size="10.5" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">Edge Gateways</text>
-              <text x="97" y="130" fill="#475569" font-size="8.5" text-anchor="middle" font-family="Fira Code, monospace">MQTT • Node-RED</text>
-
-              <rect x="200" y="96" width="125" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
-              <text x="262" y="116" fill="#1E3A8A" font-size="10.5" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">Wireless &amp; SDN</text>
-              <text x="262" y="130" fill="#475569" font-size="8.5" text-anchor="middle" font-family="Fira Code, monospace">Wi-Fi CSI • OpenFlow</text>
-              <line x1="97" y1="140" x2="97" y2="168" stroke="#94A3B8" stroke-width="1.5"/>
-              <line x1="262" y1="140" x2="262" y2="168" stroke="#94A3B8" stroke-width="1.5"/>
-              <rect x="35" y="168" width="290" height="40" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
-              <text x="180" y="186" fill="#0F172A" font-size="10.5" font-weight="600" text-anchor="middle" font-family="Inter, sans-serif">Smart Sensing &amp; Physical Environment</text>
-              <text x="180" y="200" fill="#64748B" font-size="8.5" text-anchor="middle" font-family="Fira Code, monospace">Environmental IoT • Wearables • RF Channel State</text>
-            </svg>
+        <!-- Creative Domain Visual with Offset Frame & Hover Icon Pop -->
+        <div class="about-visual-wrapper">
+          <div class="offset-border"></div>
+          <div class="about-image-card">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+              alt="Telecommunications, Edge-Cloud IoT and Smart Networks"
+              class="domain-photo"
+            />
+            <div class="image-overlay-gradient"></div>
+            <div class="floating-nodes">
+              <span><i class="fas fa-wifi"></i></span>
+              <span><i class="fas fa-cloud"></i></span>
+              <span><i class="fas fa-microchip"></i></span>
+            </div>
+            <div class="hover-pop-badge">
+              <i class="fas fa-satellite-dish"></i>
+              <span>Smart Sensing • Edge–Cloud • AI</span>
+            </div>
           </div>
         </div>
       </div>
@@ -489,7 +477,7 @@
     </div>
   </section>
 
-  <!-- Technical Skills Section (Pill Style) -->
+  <!-- Technical Skills Section -->
   <section id="skills" class="section">
     <div class="container">
       <div class="section-header">
@@ -542,7 +530,7 @@
   <!-- Dark Navy Bottom Bar -->
   <footer class="bottom-bar">
     <div class="container">
-      <p>© 2026 Rima Kasem | Telecommunications Engineer &amp; AI Researcher</p>
+      <p>© 2026 Rima Kasem | Telecom Engineer &amp; AI Researcher</p>
     </div>
   </footer>
 
